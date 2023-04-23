@@ -67,5 +67,22 @@
     "use strict";
     // Код писать здесь
     console.log("It works!");
+
+    const buttonElement = document.getElementByClass("add-form-button");
+
+    buttonElement.addEventListener("click", () => {
+      nameInputElement.classList.remove("error");
+      if (nameInputElement.value === "") {
+        nameInputElement.classList.add("error");
+        return;
+      }
+    });
+
+    const nameInputElement = document.getElementById("add-form-name");
+    const listInputElement = document.getElementById("add-form-text");
+
+    const disableButton = () => {
+      button.disabled = true;
+    };
   </script>
 </html>
